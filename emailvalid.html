@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<title>valid email</title>     
+</head>
+<body>
+<div class="mail">
+<h2>Input an email</h2>
+<form name="email" action="#"> 
+<input type='text' name='valid'/>
+<input type="submit" name="submit" value="Submit" onclick="ValidateEmail(valid)"/>
+</form>
+</div>
+
+<script>
+	function ValidateEmail(inputText)
+{
+//This is the grammer of figuring out if its a valid email or not
+var email_format = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(inputText.value.match(email_format))
+{
+	//returns true if valid
+alert("VALID EMAIL");
+return  true;
+}
+else
+{
+	//returns false if not valid
+alert("INVALID EMAIL");
+return false;
+}
+}
+</script>
+</body>
+</html>
